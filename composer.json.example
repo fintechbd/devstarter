@@ -70,24 +70,10 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/media/hafijul233/HDD/WorkDrive/XAMPP/htdocs/FintechBD/devstarter/packages/Core",
+            "url": "location/to/package/full/path",
             "options": {
                 "symlink": true
             }
         },
-        {
-            "type": "path",
-            "url": "/media/hafijul233/HDD/WorkDrive/XAMPP/htdocs/FintechBD/devstarter/packages/Generators",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "/media/hafijul233/HDD/WorkDrive/XAMPP/htdocs/FintechBD/devstarter/packages/MetaData",
-            "options": {
-                "symlink": true
-            }
-        }
     ]
 }
