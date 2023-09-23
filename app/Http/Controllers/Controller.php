@@ -9,4 +9,12 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    /**
+     * Controller constructor.
+     */
+    public function __construct()
+    {
+
+    }
 }
