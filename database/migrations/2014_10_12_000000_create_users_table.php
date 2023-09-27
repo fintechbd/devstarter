@@ -13,21 +13,10 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->integer('parent_id')->nullable()->unsigned()->default(null);
             $table->string('name');
-            $table->string('mobile')->nullable();
-            $table->string('email')->nullable();
-            $table->string('loginid')->unique();
-            $table->string('password');
-            $table->string('pin');
-            $table->string('status')->default('ACTIVE');
-            $table->unsignedSmallInteger('wrong_password')->default(0);
-            $table->unsignedSmallInteger('wrong_pin')->default(0);
-            $table->string('app_version')->default('1');
-            $table->string('fcm_token')->nullable();
-            $table->string('language')->nullable();
-            $table->string('currency')->nullable();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
