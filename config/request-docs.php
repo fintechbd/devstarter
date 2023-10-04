@@ -68,7 +68,7 @@ return [
         //ref: https://github.com/OAI/OpenAPI-Specification/pull/2117
         'delete_with_body' => false,
         //exclude http methods that will be excluded from openapi export
-        'exclude_http_methods' => ['HEAD', 'OPTION'],
+        'exclude_http_methods' => ['HEAD', 'OPTION', 'PATCH'],
         // for now putting default responses for all. This can be changed later based on specific needs
         'responses' => [
             '200' => [
