@@ -12,7 +12,7 @@ return [
     */
     'url' => 'request-docs',
     'middlewares' => [
-         \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
+        \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
     ],
 
     //Use only routes where ->uri start with next string Using Str::startWith( . e.g. - /api/mobile
@@ -39,7 +39,7 @@ return [
         'rules'
     ],
     // Can be overridden as // @LRDresponses 200|400|401
-    'default_responses' => [ "200", "204", "400", "401", "403", "404", "405", "422", "429", "500", "503"],
+    'default_responses' => ["200", "204", "400", "401", "403", "404", "422"],
 
     // By default, LRD group your routes by the first /path.
     // This is a set of regex to group your routes by prefix.
@@ -68,7 +68,7 @@ return [
         //ref: https://github.com/OAI/OpenAPI-Specification/pull/2117
         'delete_with_body' => false,
         //exclude http methods that will be excluded from openapi export
-        'exclude_http_methods' => ['HEAD', 'OPTION'],
+        'exclude_http_methods' => ['HEAD', 'OPTION', 'PATCH'],
         // for now putting default responses for all. This can be changed later based on specific needs
         'responses' => [
             '200' => [
@@ -123,11 +123,6 @@ return [
                                             'format' => 'int32',
                                             'nullable' => true
                                         ],
-                                        'last_page' => [
-                                            'type' => 'integer',
-                                            'format' => 'int32',
-                                            'nullable' => true
-                                        ],
                                         'path' => [
                                             'type' => 'string',
                                             'format' => 'uri',
@@ -140,35 +135,40 @@ return [
                                             'type' => 'integer',
                                             'format' => 'int32',
                                             'nullable' => true
-                                        ],
-                                        'total' => [
-                                            'type' => 'integer',
-                                            'format' => 'int32'
-                                        ],
-                                        'query' => [
+                                        ]
+                                    ]
+                                ],
+                                'query' => [
+                                    'type' => 'object',
+                                    'properties' => [
+                                        'search' => [
                                             'type' => 'string',
-                                            'format' => 'uri'
+                                            'nullable' => true
                                         ],
-                                        'links' => [
-                                            'type' => 'array',
-                                            'items' => [
-                                                'type' => 'object',
-                                                'properties' => [
-                                                    'url' => [
-                                                        'type' => 'string',
-                                                        'format' => 'uri',
-                                                        'nullable' => true
-                                                    ],
-                                                    'label' => [
-                                                        'type' => 'string',
-                                                    ],
-                                                    'active' => [
-                                                        'type' => 'boolean',
-                                                    ],
-                                                ]
-                                            ]
+                                        'per_page' => [
+                                            "type" => "integer",
+                                            "format" => "int32",
+                                            'nullable' => true
+                                        ],
+                                        'paginate' => [
+                                            'type' => 'bool',
+                                            'nullable' => true
+                                        ],
+                                        'sort' => [
+                                            'type' => 'string',
+                                            'nullable' => true
+                                        ],
+                                        'dir' => [
+                                            'type' => 'string',
+                                            'nullable' => true
+                                        ],
+                                        'page' => [
+                                            "type" => "integer",
+                                            "format" => "int32",
+                                            'nullable' => true
                                         ],
                                     ]
+
                                 ],
                             ]
                         ],
@@ -250,36 +250,6 @@ return [
                     ],
                 ],
             ],
-            '405' => [
-                'description' => '405 - Method Not Allowed',
-                'content' => [
-                    'application/json' => [
-                        'schema' => [
-                            'type' => 'object',
-                            'properties' => [
-                                'message' => [
-                                    'type' => 'string'
-                                ]
-                            ]
-                        ],
-                    ],
-                ],
-            ],
-            '408' => [
-                'description' => '408 - Payment Required',
-                'content' => [
-                    'application/json' => [
-                        'schema' => [
-                            'type' => 'object',
-                            'properties' => [
-                                'message' => [
-                                    'type' => 'string'
-                                ]
-                            ]
-                        ],
-                    ],
-                ],
-            ],
             '422' => [
                 'description' => '422 - Unprocessable Entity',
                 'content' => [
@@ -313,51 +283,6 @@ return [
                                         ],
                                     ]
                                 ],
-                            ]
-                        ],
-                    ],
-                ],
-            ],
-            '429' => [
-                'description' => '429 - Too Many Requests',
-                'content' => [
-                    'application/json' => [
-                        'schema' => [
-                            'type' => 'object',
-                            'properties' => [
-                                'message' => [
-                                    'type' => 'string'
-                                ]
-                            ]
-                        ],
-                    ],
-                ],
-            ],
-            '500' => [
-                'description' => '500 - Internal Server Error',
-                'content' => [
-                    'application/json' => [
-                        'schema' => [
-                            'type' => 'object',
-                            'properties' => [
-                                'message' => [
-                                    'type' => 'string'
-                                ]
-                            ]
-                        ],
-                    ],
-                ],
-            ],
-            '503' => [
-                'description' => '503 - Service Unavailable',
-                'content' => [
-                    'application/json' => [
-                        'schema' => [
-                            'type' => 'object',
-                            'properties' => [
-                                'message' => [
-                                    'type' => 'string'
-                                ]
                             ]
                         ],
                     ],

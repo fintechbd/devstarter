@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $routes = array_keys(Route::getRoutes()->getRoutesByName());
+
+    $permissions = [];
+
+    foreach ($routes as $route) {
+        $permissions[] = [
+            'name' => $route,
+            'guard_name' => 'web'
+        ];
+    }
+
+    echo '<pre>';
+    echo var_export($permissions);
+    echo '</pre>';
+
+    return '';
 });
