@@ -23,11 +23,11 @@ class DatabaseSeeder extends Seeder
         $this->call(RegionSeeder::class);
         $this->call(SubRegionSeeder::class);
         $this->call(CountrySeeder::class);
-        $this->call(StateSeeder::class);
+//        $this->call(StateSeeder::class);
 //        $this->call(CitySeeder::class);
         $this->call(TeamSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(PermissionSeeder::class);
-        $this->call(UserSeeder::class);
+//        $this->call(UserSeeder::class);
     }
 }
