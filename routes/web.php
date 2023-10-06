@@ -32,3 +32,7 @@ Route::get('/', function () {
 
     return '';
 });
+
+Route::get('test', function () {
+    dd(action_link('test', 'test'));
+});
