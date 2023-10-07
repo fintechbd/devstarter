@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Fintech\MetaData\Seeders\FundSourceSeeder;
 use Fintech\MetaData\Seeders\OccupationSeeder;
 use Fintech\MetaData\Seeders\RelationSeeder;
+use Fintech\MetaData\Seeders\RemittancePurposeSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FundSourceSeeder::class);
         $this->call(RelationSeeder::class);
         $this->call(OccupationSeeder::class);
+        $this->call(RemittancePurposeSeeder::class);
     }
 
     private function stateSeeders()
