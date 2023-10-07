@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
     private function stateSeeders()
     {
         $this->call([
-            \Fintech\MetaData\Seeders\State1Seeder::class,
-            \Fintech\MetaData\Seeders\State2Seeder::class,
-            \Fintech\MetaData\Seeders\State3Seeder::class,
-            \Fintech\MetaData\Seeders\State4Seeder::class
+            \Fintech\MetaData\Seeders\States\State1Seeder::class,
+            \Fintech\MetaData\Seeders\States\State2Seeder::class,
+            \Fintech\MetaData\Seeders\States\State3Seeder::class,
+            \Fintech\MetaData\Seeders\States\State4Seeder::class
         ]);
     }
 
