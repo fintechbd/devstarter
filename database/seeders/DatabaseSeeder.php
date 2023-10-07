@@ -11,15 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-//        $this->call(RegionSeeder::class);
-//        $this->call(SubRegionSeeder::class);
-//        $this->call(CountrySeeder::class);
-//        $this->call(StateSeeder::class);
-//        $this->call(TeamSeeder::class);
-//        $this->call(RoleSeeder::class);
-//        $this->call(PermissionSeeder::class);
-//        $this->call(UserSeeder::class);
+        $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
+        $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
+        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
         $this->stateSeeders();
+        $this->citySeeders();
+//        $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
     }
 
     private function stateSeeders()
