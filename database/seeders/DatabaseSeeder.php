@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use Fintech\MetaData\Seeders\FundSourceSeeder;
+use Fintech\MetaData\Seeders\OccupationSeeder;
+use Fintech\MetaData\Seeders\RelationSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,15 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
-        $this->stateSeeders();
-        $this->citySeeders();
-        $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
+//        $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
+//        $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
+//        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
+//        $this->stateSeeders();
+//        $this->citySeeders();
+//        $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
+        $this->call(FundSourceSeeder::class);
+        $this->call(RelationSeeder::class);
+        $this->call(OccupationSeeder::class);
     }
 
     private function stateSeeders()
