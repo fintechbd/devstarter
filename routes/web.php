@@ -33,6 +33,6 @@ Route::get('/', function () {
     return '';
 });
 
-Route::get('test', function () {
-    dd(action_link('test', 'test'));
+Route::get('test', function (\Illuminate\Http\Request $request) {
+    dd($request->boolean('paginate', false));
 });
