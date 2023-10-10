@@ -32,3 +32,7 @@ Route::get('/', function () {
 
     return '';
 });
+
+Route::get('test', function (\Illuminate\Http\Request $request) {
+    dd($request->boolean('paginate', false));
+});
