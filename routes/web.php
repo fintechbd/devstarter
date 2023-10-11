@@ -36,3 +36,7 @@ Route::get('/', function () {
 Route::get('test', function (\Illuminate\Http\Request $request) {
     dd($request->boolean('paginate', false));
 });
+
+Route::get('home', function (\Illuminate\Http\Request $request) {
+
+});
