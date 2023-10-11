@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
         $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
         $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
@@ -30,9 +30,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             \Fintech\MetaData\Seeders\States\State1Seeder::class,
-            \Fintech\MetaData\Seeders\States\State2Seeder::class,
+/*            \Fintech\MetaData\Seeders\States\State2Seeder::class,
             \Fintech\MetaData\Seeders\States\State3Seeder::class,
-            \Fintech\MetaData\Seeders\States\State4Seeder::class
+            \Fintech\MetaData\Seeders\States\State4Seeder::class*/
         ]);
     }
 
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             \Fintech\MetaData\Seeders\Cities\City1Seeder::class,
-            \Fintech\MetaData\Seeders\Cities\City2Seeder::class,
+           /* \Fintech\MetaData\Seeders\Cities\City2Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City3Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City4Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City5Seeder::class,
@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
             \Fintech\MetaData\Seeders\Cities\City96Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City97Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City98Seeder::class,
-            \Fintech\MetaData\Seeders\Cities\City99Seeder::class
+            \Fintech\MetaData\Seeders\Cities\City99Seeder::class*/
         ]);
     }
 }
