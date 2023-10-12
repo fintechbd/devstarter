@@ -4,7 +4,7 @@ return [
     'enabled' => true,
     // change it to true will make lrd to throw exception if rules in request class need to be changed
     // keep it false
-    'debug' => true,
+    'debug' => false,
 
     /*
     * Route where request docs will be served from laravel app.
@@ -12,7 +12,7 @@ return [
     */
     'url' => 'request-docs',
     'middlewares' => [
-        \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
+//        \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
     ],
 
     //Use only routes where ->uri start with next string Using Str::startWith( . e.g. - /api/mobile

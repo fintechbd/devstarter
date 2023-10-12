@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
         $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
         $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
