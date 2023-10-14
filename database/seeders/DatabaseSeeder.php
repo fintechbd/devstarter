@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
+        $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
     }
 
     private function stateSeeders()
