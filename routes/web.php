@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,10 +36,14 @@ Route::get('/', function () {
 //    return '';
 });
 
-Route::get('test', function (\Illuminate\Http\Request $request) {
+Route::get('test', function (Request $request) {
     dd($request->boolean('paginate', false));
 });
 
-Route::get('home', function (\Illuminate\Http\Request $request) {
+Route::get('home', function (Request $request) {
 
 });
+
+Route::get('password/reset/{token}', function (Request $request) {
+
+})->name('password.reset');
