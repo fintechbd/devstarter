@@ -151,7 +151,7 @@ return [
                                             'nullable' => true
                                         ],
                                         'paginate' => [
-                                            'type' => 'bool',
+                                            'type' => 'boolean',
                                             'nullable' => true
                                         ],
                                         'sort' => [
