@@ -89,6 +89,49 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Generators",
+            "options": {
+             "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Banco",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Bell",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Business",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Promo",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Remit",
+            "options": {
+                "symlink": true
+            }
         }
+
     ]
 }
