@@ -41,7 +41,7 @@ Route::get('test', function (Request $request) {
 });
 
 Route::get('home', function (Request $request) {
-
+    return view('welcome');
 });
 
 Route::get('password/reset/{token}', function (Request $request) {
