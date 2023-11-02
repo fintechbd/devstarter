@@ -45,5 +45,5 @@ Route::get('home', function (Request $request) {
 });
 
 Route::get('password/reset/{token}', function (Request $request) {
-
+dd($request->route('token'));
 })->name('password.reset');
