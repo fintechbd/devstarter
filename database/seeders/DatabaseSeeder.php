@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(\Fintech\Banco\Seeders\BranchSeeder::class);
         $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
         $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
         $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
@@ -25,6 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
         $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
+        $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
+        $this->branchSeeder();
     }
 
     private function stateSeeders()
@@ -139,6 +142,23 @@ class DatabaseSeeder extends Seeder
             \Fintech\MetaData\Seeders\Cities\City97Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City98Seeder::class,
             \Fintech\MetaData\Seeders\Cities\City99Seeder::class
+        ]);
+    }
+
+    private function branchSeeder()
+    {
+        $this->call([
+            \Fintech\Banco\Seeders\Branches\Branch1Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch2Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch3Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch4Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch5Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch6Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch7Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch8Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch9Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch10Seeder::class,
+            \Fintech\Banco\Seeders\Branches\Branch11Seeder::class
         ]);
     }
 }
