@@ -15,35 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     return redirect()->route('request-docs.index');
-
-    $routes = array_keys(Route::getRoutes()->getRoutesByName());
-//
-//    $permissions = [];
-//
-//    foreach ($routes as $route) {
-//        $permissions[] = [
-//            'name' => $route,
-//            'guard_name' => 'web'
-//        ];
-//    }
-//
-//    echo '<pre>';
-//    echo var_export($permissions);
-//    echo '</pre>';
-//
-//    return '';
 });
-
-Route::get('test', function (Request $request) {
-    dd($request->boolean('paginate', false));
-});
-
-Route::get('home', function (Request $request) {
-    return view('welcome');
-});
-
-Route::get('password/reset/{token}', function (Request $request) {
-dd($request->route('token'));
-})->name('password.reset');
