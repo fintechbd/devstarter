@@ -149,6 +149,7 @@ class DatabaseSeeder extends Seeder
 
     private function branchSeeder()
     {
+
         $this->call([
             \Fintech\Banco\Seeders\Branches\Branch1Seeder::class,
             \Fintech\Banco\Seeders\Branches\Branch2Seeder::class,
