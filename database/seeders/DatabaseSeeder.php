@@ -20,14 +20,14 @@ class DatabaseSeeder extends Seeder
         $this->citySeeders();
         $this->call(\Fintech\Auth\Seeders\IdDocTypeSeeder::class);
         $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
-//        $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
-//        $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
-//        $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
-//        $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
-//        $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
-//        $this->call(\Fintech\Banco\Seeders\BeneficiaryTypeSeeder::class);
-//        $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
-//        $this->branchSeeder();
+        $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
+        $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
+        $this->call(\Fintech\Banco\Seeders\BeneficiaryTypeSeeder::class);
+        $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
+        $this->branchSeeder();
     }
 
     private function stateSeeders()
@@ -150,16 +150,16 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             \Fintech\Banco\Seeders\Branches\Branch1Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch2Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch3Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch4Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch5Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch6Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch7Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch8Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch9Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch10Seeder::class,
-            \Fintech\Banco\Seeders\Branches\Branch11Seeder::class
+//            \Fintech\Banco\Seeders\Branches\Branch2Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch3Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch4Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch5Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch6Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch7Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch8Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch9Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch10Seeder::class,
+//            \Fintech\Banco\Seeders\Branches\Branch11Seeder::class
         ]);
     }
 }
