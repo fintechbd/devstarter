@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->stateSeeders();
         $this->citySeeders();
         $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
+        $this->call(\Fintech\Auth\Seeders\IdDocTypeSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
