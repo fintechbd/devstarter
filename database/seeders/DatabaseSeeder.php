@@ -11,23 +11,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(\Fintech\Banco\Seeders\BranchSeeder::class);
         $this->call(\Fintech\Auth\Seeders\PermissionSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\TeamSeeder::class);
         $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
-        $this->stateSeeders();
-        $this->citySeeders();
-        $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
-        $this->call(\Fintech\Auth\Seeders\IdDocTypeSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
-        $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
-        $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
-        $this->call(\Fintech\Banco\Seeders\BeneficiaryTypeSeeder::class);
+//        $this->stateSeeders();
+//        $this->citySeeders();
+//        $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
+//        $this->call(\Fintech\Auth\Seeders\IdDocTypeSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
+//        $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
+//        $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
+//        $this->call(\Fintech\Banco\Seeders\BeneficiaryTypeSeeder::class);
         $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
         $this->branchSeeder();
     }
