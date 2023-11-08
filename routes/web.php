@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 //    return redirect()->route('request-docs.index');
-
-    $message = (new \Fintech\Bell\Messages\SmsMessage())->to("+88016898553434")->message('Hello World');
-
-    (new \Fintech\Bell\Drivers\Sms\ClickSend())->send($message);
+    \Illuminate\Support\Facades\Notification::route(SmsChannel::class, '+8801689553434')->notify(new \App\Notifications\TestSMS());
 
 });

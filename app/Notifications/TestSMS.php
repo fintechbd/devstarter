@@ -25,7 +25,7 @@ class TestSMS extends Notification
      */
     public function via(object $notifiable): array
     {
-        return [SmsChannel::class];
+        return ['sms'];
     }
 
     public function toSms(object $notifiable)
