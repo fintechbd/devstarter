@@ -1,5 +1,6 @@
 <?php
 
+use Fintech\Bell\Channels\SmsChannel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('request-docs.index');
+//    return redirect()->route('request-docs.index');
+
+    $message = (new \Fintech\Bell\Messages\SmsMessage())->to("+88016898553434")->message('Hello World');
+
+    (new \Fintech\Bell\Drivers\Sms\ClickSend())->send($message);
+
 });
