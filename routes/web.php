@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-//    return redirect()->route('request-docs.index');
-    \Illuminate\Support\Facades\Notification::route(SmsChannel::class, '+8801689553434')->notify(new \App\Notifications\TestSMS());
+    return redirect()->route('request-docs.index');
+//    \Illuminate\Support\Facades\Notification::route(SmsChannel::class, '+8801689553434')->notify(new \App\Notifications\TestSMS());
 
 });
