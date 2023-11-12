@@ -40,8 +40,6 @@ class PngToSvgCommand extends Command
 
             $this->convertImage($src_dir . DIRECTORY_SEPARATOR . $file, $target_dir);
         }
-
-
     }
 
     private function convertImage($file, $target_dir)
