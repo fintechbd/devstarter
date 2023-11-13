@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
         $this->branchSeeder();
         $this->call(\Fintech\Business\Seeders\ServiceSettingSeeder::class);
         $this->call(\Fintech\Business\Seeders\ServiceTypeSeeder::class);
+        $this->call(\Fintech\Transaction\Seeders\ChartClassSeeder::class);
     }
 
     private function stateSeeders()
