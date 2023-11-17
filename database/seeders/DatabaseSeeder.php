@@ -30,8 +30,9 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
         $this->branchSeeder();
         $this->call(\Fintech\Business\Seeders\ServiceSettingSeeder::class);
-        $this->call(\Fintech\Business\Seeders\ServiceTypeSeeder::class);
+//        $this->call(\Fintech\Business\Seeders\ServiceTypeSeeder::class);
         $this->call(\Fintech\Transaction\Seeders\ChartClassSeeder::class);
+        $this->call(\Fintech\Reload\Seeders\DepositSeeder::class);
     }
 
     private function stateSeeders()
