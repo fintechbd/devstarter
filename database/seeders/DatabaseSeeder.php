@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\MetaData\Seeders\RelationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\OccupationSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RemittancePurposeSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\BloodGroupSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\GenderSeeder::class);
+        $this->call(\Fintech\MetaData\Seeders\MaritalStatusSeeder::class);
         $this->call(\Fintech\Core\Seeders\SettingSeeder::class);
         $this->call(\Fintech\Banco\Seeders\BeneficiaryTypeSeeder::class);
         $this->call(\Fintech\Banco\Seeders\BankSeeder::class);
