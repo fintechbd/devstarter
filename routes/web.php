@@ -18,3 +18,7 @@ Route::get('/', function () {
 //    \Illuminate\Support\Facades\Notification::route(SmsChannel::class, '+8801689553434')->notify(new \App\Notifications\TestSMS());
 
 });
+
+Route::get('/get-config/{config}', function (string $config) {
+    dd(config($config));
+});
