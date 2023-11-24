@@ -16,9 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\Auth\Seeders\RoleSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
+
+        /**N.B: Role and Permission seed must load before country and user seed **/
         $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
         $this->stateSeeders();
         $this->citySeeders();
+
         $this->call(\Fintech\Auth\Seeders\IdDocTypeSeeder::class);
         $this->call(\Fintech\Auth\Seeders\UserSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\FundSourceSeeder::class);
