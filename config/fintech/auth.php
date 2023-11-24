@@ -239,7 +239,7 @@ return [
     |
     | This value will be used to across system where model is needed
     */
-    'middleware' => ['auth'],
+    'middleware' => ['auth:sanctum'],
 //    'middleware' => [],
 
     /*
