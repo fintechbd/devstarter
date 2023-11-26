@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 });
 
+Route::view('/welcome', 'welcome');
+
 Route::get('/get-config/{config}', function (string $config) {
     dd(config($config));
 });
