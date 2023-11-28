@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -40,6 +39,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\Transaction\Seeders\ChartClassSeeder::class);
         $this->call(\Fintech\Reload\Seeders\DepositSeeder::class);
         $this->call(ServingCountrySeeder::class);
+        $this->call(\Fintech\Transaction\Seeders\TransactionFormSeeder::class);
     }
 
     private function stateSeeders()
