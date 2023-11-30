@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\Reload\Seeders\DepositSeeder::class);
         $this->call(ServingCountrySeeder::class);
         $this->call(\Fintech\Transaction\Seeders\TransactionFormSeeder::class);
+        $this->call(\Fintech\Remit\Seeders\BankTransferSeeder::class);
     }
 
     private function stateSeeders()
