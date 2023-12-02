@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ServingCountrySeeder::class);
         $this->call(\Fintech\Transaction\Seeders\TransactionFormSeeder::class);
         $this->call(\Fintech\Remit\Seeders\BankTransferSeeder::class);
+        $this->call(\Fintech\Business\Seeders\CurrencyRateSeeder::class);
     }
 
     private function stateSeeders()
