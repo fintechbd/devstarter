@@ -1,22 +1,10 @@
 @php
-$data1 = [
-    'service_id' => 1,
-    'source_country_id' => 1,
-    'destination_country_id' => 19,
-    'amount' => 1000,
-    'reverse' => false
-];
-
-dump(\Fintech\Business\Facades\Business::currencyRate()->convert($data1));
-
-$data2 = [
-    'service_id' => 1,
-    'source_country_id' => 1,
-    'destination_country_id' => 19,
-    'amount' => 1000,
-    'reverse' => true,
-    'get_only_rate' => true
-];
-
-dd(\Fintech\Business\Facades\Business::currencyRate()->convert($data2));
+     $entries = collect();
+    foreach (\Fintech\Core\Enums\Auth\ProofOfAddressType::toArray() as $key => $status) {
+                $entries->push([
+                    'label' => ucwords(str_replace("_", " ", preg_replace('/(?<!^)[A-Z]/', '_$0', $status))),
+                    'attribute' => $key
+                ]);
+    }
+    dd($entries);
 @endphp
