@@ -21,3 +21,4 @@ composer.lock
 composer.json
 storage/cli-package.json
 /some.*
+/public/.user.ini

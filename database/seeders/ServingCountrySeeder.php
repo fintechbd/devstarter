@@ -28,6 +28,8 @@ class ServingCountrySeeder extends Seeder
             $countryData = $country->country_data;
 
             $countryData['is_serving'] = true;
+            $countryData['multi_currency_enabled'] = true;
+            $countryData['language_enabled'] = true;
 
             if (!MetaData::country()->update($countryId, ['country_data' => $countryData])) {
                 throw (new UpdateOperationException())->setModel(config('fintech.metadata.country_model'), $countryId);
