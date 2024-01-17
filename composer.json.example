@@ -1,32 +1,45 @@
 {
-    "name": "laravel/laravel",
+    "name": "fintech/devstarter",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-imagick": "*",
         "ext-json": "*",
         "ext-pdo": "*",
+        "fintech/airtime": "*",
+        "fintech/auth": "*",
+        "fintech/banco": "*",
+        "fintech/bell": "*",
+        "fintech/business": "*",
         "fintech/core": "*",
+        "fintech/gift": "*",
+        "fintech/metadata": "*",
+        "fintech/promo": "*",
+        "fintech/reload": "*",
+        "fintech/remit": "*",
+        "fintech/tab": "*",
+        "fintech/transaction": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8",
         "league/flysystem-aws-s3-v3": "^3.0",
         "mongodb/laravel-mongodb": "^4.0@RC",
         "owen-it/laravel-auditing": "^13.5",
-        "rakutentech/laravel-request-docs": "*",
+        "rakutentech/laravel-request-docs": "^2.23",
         "spatie/laravel-permission": "^5.11",
         "spatie/laravel-translatable": "^6.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
         "fakerphp/faker": "^1.9.1",
-        "fintech/auth": "*",
-        "fintech/metadata": "*",
+        "fintech/generators": "*",
         "laravel/pint": "^1.0",
-        "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.1",
@@ -85,16 +98,9 @@
         },
         {
             "type": "path",
-            "url": "./packages/MetaData",
+            "url": "./packages/Airtime",
             "options": {
                 "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./packages/Generators",
-            "options": {
-             "symlink": true
             }
         },
         {
@@ -120,7 +126,42 @@
         },
         {
             "type": "path",
+            "url": "./packages/Core",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Generator",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Gift",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/MetaData",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
             "url": "./packages/Promo",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Reload",
             "options": {
                 "symlink": true
             }
@@ -131,7 +172,20 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Tab",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/Transaction",
+            "options": {
+                "symlink": true
+            }
         }
-
     ]
 }

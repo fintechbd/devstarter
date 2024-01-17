@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "fintech/devstarter",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
@@ -9,10 +9,22 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-imagick": "*",
         "ext-json": "*",
         "ext-pdo": "*",
-        "fintech/business": "dev-main",
+        "fintech/airtime": "*",
+        "fintech/auth": "*",
+        "fintech/banco": "*",
+        "fintech/bell": "*",
+        "fintech/business": "*",
         "fintech/core": "*",
+        "fintech/gift": "*",
+        "fintech/metadata": "*",
+        "fintech/promo": "*",
+        "fintech/reload": "*",
+        "fintech/remit": "*",
+        "fintech/tab": "*",
+        "fintech/transaction": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
@@ -27,11 +39,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
         "fakerphp/faker": "^1.9.1",
-        "fintech/auth": "*",
-        "fintech/promo": "*",
         "fintech/generators": "*",
-        "fintech/banco": "*",
-        "fintech/metadata": "*",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
@@ -85,7 +93,19 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/fintechbd/core.git"
+            "url": "https://github.com/fintechbd/auth.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/airtime.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/banco.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/bell.git"
         },
         {
             "type": "vcs",
@@ -93,11 +113,27 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/fintechbd/core.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/generator.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/gift.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/metadata.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/fintechbd/promo.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/fintechbd/auth.git"
+            "url": "https://github.com/fintechbd/reload.git"
         },
         {
             "type": "vcs",
@@ -105,7 +141,11 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/fintechbd/metadata.git"
+            "url": "https://github.com/fintechbd/tab.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/fintechbd/transaction.git"
         }
     ]
 }
