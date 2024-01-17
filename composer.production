@@ -86,7 +86,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
-        }
+        },
+        "platform-check": false
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -117,7 +118,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/fintechbd/generator.git"
+            "url": "https://github.com/fintechbd/generators.git"
         },
         {
             "type": "vcs",
