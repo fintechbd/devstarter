@@ -1,10 +1,18 @@
 @php
-     $entries = collect();
-    foreach (\Fintech\Core\Enums\Auth\ProofOfAddressType::toArray() as $key => $status) {
-                $entries->push([
-                    'label' => ucwords(str_replace("_", " ", preg_replace('/(?<!^)[A-Z]/', '_$0', $status))),
-                    'attribute' => $key
-                ]);
-    }
-    dd($entries);
-@endphp
+$request = request();
+
+$filters = [
+                'user_id' => $request->input('user_id'),
+                'created_at_start_date' => now()->subDays($request->input('duration'))->format('Y-m-d'),
+                'created_at_end_date' => now()->format('Y-m-d'),
+                'sum_converted_amount' => true,
+                'order_type' => $request->input('type', 'transfer'),
+                'paginate' => false,
+                'sort' => 'orders.currency',
+                'dir' => 'asc'
+            ];
+ $orderSum = \Fintech\Transaction\Facades\Transaction::order()->list($filters);
+
+ dd($orderSum);
+
+ @endphp
