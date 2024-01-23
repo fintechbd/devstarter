@@ -46,7 +46,7 @@ return [
     | 3. options: cursorPaginate -> for advance memory cursor pagination
     |
     */
-    'pagination_type' => 'simplePaginate',
+    'pagination_type' => 'paginate',
 
     /*
     |--------------------------------------------------------------------------
