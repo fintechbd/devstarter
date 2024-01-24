@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Fintech\MetaData\Seeders\RegionSeeder::class);
         $this->call(\Fintech\MetaData\Seeders\SubRegionSeeder::class);
 
-        /**N.B: Role and Permission seed must load before country and user seed **/
+        //N.B: Role and Permission seed must load before country and user seed
         $this->call(\Fintech\MetaData\Seeders\CountrySeeder::class);
         $this->stateSeeders();
         $this->citySeeders();
